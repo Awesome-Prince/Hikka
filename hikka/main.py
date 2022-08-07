@@ -38,10 +38,10 @@ import os
 import random
 import socket
 import sqlite3
+import subprocess
 import sys
 from math import ceil
 from typing import Union
-import subprocess
 
 from telethon import TelegramClient, events
 from telethon.errors.rpcerrorlist import (
@@ -53,13 +53,13 @@ from telethon.network.connection import (
     ConnectionTcpFull,
     ConnectionTcpMTProxyRandomizedIntermediate,
 )
-from telethon.sessions import SQLiteSession, StringSession, MemorySession
+from telethon.sessions import MemorySession, SQLiteSession, StringSession
 
-from . import database, loader, utils, heroku
+from . import database, heroku, loader, utils
 from .dispatcher import CommandDispatcher
+from .entity_cache import install_entity_caching
 from .translations import Translator
 from .version import __version__
-from .entity_cache import install_entity_caching
 
 try:
     from .web import core

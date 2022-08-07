@@ -1,14 +1,13 @@
 """Handles heroku uploads"""
 
-from collections import namedtuple
 import logging
 import os
+from collections import namedtuple
+from typing import Optional
 
 import heroku3
-
 from git import Repo
 from git.exc import InvalidGitRepositoryError
-from typing import Optional
 
 from . import utils
 

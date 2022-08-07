@@ -1,10 +1,12 @@
 import asyncio
 import functools
 import logging
+import os
 import time
 import traceback
 from types import FunctionType
 from typing import List, Optional, Union
+from urllib.parse import urlparse
 
 from aiogram.types import (
     CallbackQuery,
@@ -17,15 +19,11 @@ from aiogram.types import (
     InputMediaPhoto,
 )
 from aiogram.utils.exceptions import BadRequest, InvalidHTTPUrlContent, RetryAfter
-
-from telethon.tl.types import Message
 from telethon.errors.rpcerrorlist import ChatSendInlineForbiddenError
+from telethon.tl.types import Message
 
-from urllib.parse import urlparse
-import os
-
-from .. import utils, main
-from .types import InlineUnit, InlineMessage
+from .. import main, utils
+from .types import InlineMessage, InlineUnit
 
 logger = logging.getLogger(__name__)
 

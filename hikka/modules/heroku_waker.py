@@ -19,7 +19,7 @@ except ImportError as e:
 
 from telethon.tl.types import Message
 
-from .. import loader, main, utils, heroku
+from .. import heroku, loader, main, utils
 
 logger = logging.getLogger(__name__)
 

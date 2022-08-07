@@ -10,16 +10,17 @@
 
 # scope: inline
 
-import logging
 import atexit
+import logging
+import os
 import random
 import sys
-import os
-from telethon.tl.types import Message
+
 from telethon.tl.functions.messages import (
     GetDialogFiltersRequest,
     UpdateDialogFilterRequest,
 )
+from telethon.tl.types import Message
 from telethon.utils import get_display_name
 
 from .. import loader, main, utils

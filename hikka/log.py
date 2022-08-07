@@ -27,8 +27,8 @@
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
 import asyncio
-import logging
 import io
+import logging
 
 from . import utils
 from ._types import Module

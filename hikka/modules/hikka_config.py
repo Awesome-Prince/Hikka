@@ -12,11 +12,11 @@
 
 import ast
 import logging
-from typing import Union, Any
+from typing import Any, Union
 
 from telethon.tl.types import Message
 
-from .. import loader, utils, translations
+from .. import loader, translations, utils
 from ..inline.types import InlineCall
 
 logger = logging.getLogger(__name__)

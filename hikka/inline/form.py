@@ -1,27 +1,27 @@
 import logging
+import random
 import time
+import traceback
 from asyncio import Event
 from types import FunctionType
 from typing import List, Optional, Union
-import random
-import grapheme
-import traceback
 
+import grapheme
 from aiogram.types import (
     InlineQuery,
     InlineQueryResultArticle,
-    InlineQueryResultPhoto,
-    InputTextMessageContent,
+    InlineQueryResultAudio,
     InlineQueryResultDocument,
     InlineQueryResultGif,
-    InlineQueryResultVideo,
     InlineQueryResultLocation,
-    InlineQueryResultAudio,
+    InlineQueryResultPhoto,
+    InlineQueryResultVideo,
+    InputTextMessageContent,
 )
-from telethon.tl.types import Message
 from telethon.errors.rpcerrorlist import ChatSendInlineForbiddenError
+from telethon.tl.types import Message
 
-from .. import utils, main
+from .. import main, utils
 from .types import InlineMessage, InlineUnit
 
 logger = logging.getLogger(__name__)

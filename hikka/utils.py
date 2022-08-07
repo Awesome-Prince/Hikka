@@ -28,6 +28,7 @@
 
 import asyncio
 import functools
+import inspect
 import io
 import json
 import logging
@@ -37,7 +38,6 @@ import re
 import shlex
 import string
 import time
-import inspect
 from datetime import timedelta
 from typing import Any, List, Optional, Tuple, Union
 from urllib.parse import urlparse
@@ -56,6 +56,7 @@ from telethon.tl.functions.messages import (
 )
 from telethon.tl.types import (
     Channel,
+    Chat,
     InputPeerNotifySettings,
     MessageEntityBankCard,
     MessageEntityBlockquote,
@@ -81,7 +82,6 @@ from telethon.tl.types import (
     PeerChat,
     PeerUser,
     User,
-    Chat,
 )
 
 from .inline.types import InlineCall, InlineMessage

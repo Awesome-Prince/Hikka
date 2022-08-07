@@ -1,8 +1,9 @@
-import time
 import asyncio
 import logging
-from telethon.hints import EntityLike
+import time
+
 from telethon import TelegramClient
+from telethon.hints import EntityLike
 
 logger = logging.getLogger(__name__)
 

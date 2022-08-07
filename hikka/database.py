@@ -8,11 +8,11 @@
 # 🔒 Licensed under the GNU GPLv3
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
+import asyncio
 import json
 import logging
 import os
 import time
-import asyncio
 
 try:
     import psycopg2
@@ -29,11 +29,10 @@ except ImportError as e:
 
 from typing import Any, Union
 
-from telethon.tl.functions.channels import EditTitleRequest
-from telethon.tl.types import Message
 from telethon.errors.rpcerrorlist import ChannelsTooMuchError
+from telethon.tl.types import Message
 
-from . import utils, main
+from . import main, utils
 
 DATA_DIR = (
     os.path.normpath(os.path.join(utils.get_base_dir(), ".."))

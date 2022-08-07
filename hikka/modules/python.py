@@ -10,9 +10,9 @@
 
 import itertools
 import logging
+import os
 from traceback import format_exc
 from types import ModuleType
-import os
 
 import telethon
 from meval import meval

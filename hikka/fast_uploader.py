@@ -9,6 +9,7 @@ import io
 import logging
 import math
 import os
+import time
 from collections import defaultdict
 from typing import (
     AsyncGenerator,
@@ -20,8 +21,6 @@ from typing import (
     Tuple,
     Union,
 )
-
-import time
 
 from telethon import TelegramClient, helpers, utils
 from telethon.crypto import AuthKey
@@ -45,8 +44,8 @@ from telethon.tl.types import (
     InputFileLocation,
     InputPeerPhotoFileLocation,
     InputPhotoFileLocation,
-    TypeInputFile,
     Message,
+    TypeInputFile,
 )
 
 from .inline.types import InlineMessage

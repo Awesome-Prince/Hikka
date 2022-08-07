@@ -2,10 +2,10 @@ import ast
 import logging
 from dataclasses import dataclass, field
 from typing import Any, Optional, Union
-from .inline.types import *
-from . import validators  # skipcq: PY-W2000
 
 from telethon.tl.types import Message
+
+from . import validators  # skipcq: PY-W2000
 
 logger = logging.getLogger(__name__)
 

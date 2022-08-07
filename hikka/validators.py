@@ -1,8 +1,10 @@
 import functools
-from typing import Any, Optional, Union
-from . import utils
-import grapheme
 import re
+from typing import Any, Optional, Union
+
+import grapheme
+
+from . import utils
 
 
 class ValidationError(Exception):

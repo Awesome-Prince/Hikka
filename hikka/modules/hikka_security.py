@@ -17,7 +17,7 @@ from typing import List, Union
 from telethon.tl.types import Message, PeerUser, User
 from telethon.utils import get_display_name
 
-from .. import loader, security, utils, main
+from .. import loader, main, security, utils
 from ..inline.types import InlineCall
 from ..security import (
     DEFAULT_PERMISSIONS,

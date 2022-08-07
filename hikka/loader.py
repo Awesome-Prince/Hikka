@@ -32,24 +32,24 @@ import importlib
 import importlib.util
 import inspect
 import logging
-import re
 import os
 import sys
 from importlib.abc import SourceLoader
 from importlib.machinery import ModuleSpec
 from types import FunctionType
-from typing import Any, Optional, Union, List
+from typing import Any, List, Optional, Union
+
 from telethon.tl.types import Message
 
 from . import security, utils, validators  # noqa: F401
-from ._types import (  # noqa: F401
+from ._types import (
     ConfigValue,
-    LoadError,
+    InlineMessage,
+    LoadError,  # noqa: F401
     Module,
     ModuleConfig,
     SelfUnload,
     StopLoop,
-    InlineMessage,
 )
 from .fast_uploader import download_file, upload_file
 from .inline.core import InlineManager
@@ -321,10 +321,7 @@ class Modules:
             mods = [
                 os.path.join(utils.get_base_dir(), MODULES_NAME, mod)
                 for mod in filter(
-                    lambda x: (
-                        x.endswith(".py")
-                        and not x.startswith("_")
-                    ),
+                    lambda x: (x.endswith(".py") and not x.startswith("_")),
                     os.listdir(os.path.join(utils.get_base_dir(), MODULES_NAME)),
                 )
             ]

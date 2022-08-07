@@ -16,8 +16,8 @@ import time
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest
 from telethon.tl.functions.messages import (
-    GetScheduledHistoryRequest,
     DeleteScheduledMessagesRequest,
+    GetScheduledHistoryRequest,
 )
 from telethon.tl.types import Message
 

@@ -1,26 +1,25 @@
 import asyncio
-import inspect
-import logging
 import contextlib
+import functools
+import inspect
 import io
+import logging
 import os
 from copy import deepcopy
 from types import FunctionType
 from typing import List, Optional, Union
 from urllib.parse import urlparse
-import functools
 
 from aiogram.types import (
     CallbackQuery,
     InlineKeyboardButton,
     InlineKeyboardMarkup,
     InputMediaAnimation,
-    InputMediaDocument,
     InputMediaAudio,
+    InputMediaDocument,
     InputMediaPhoto,
     InputMediaVideo,
 )
-
 from aiogram.utils.exceptions import (
     InvalidQueryID,
     MessageIdInvalid,
@@ -30,7 +29,7 @@ from aiogram.utils.exceptions import (
 
 from .. import utils
 from .._types import Module
-from .types import InlineUnit, InlineCall
+from .types import InlineCall, InlineUnit
 
 logger = logging.getLogger(__name__)
 

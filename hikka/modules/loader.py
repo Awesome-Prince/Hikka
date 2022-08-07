@@ -28,6 +28,7 @@
 
 # scope: inline
 
+import ast
 import asyncio
 import contextlib
 import importlib
@@ -35,7 +36,6 @@ import inspect
 import logging
 import os
 import re
-import ast
 import sys
 import time
 import uuid

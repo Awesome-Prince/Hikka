@@ -239,7 +239,9 @@ class CoreMod(loader.Module):
         aliases = self.allmodules.aliases
         string = self.strings("aliases")
 
-        string += "\n".join([f"▫️ <code>{i}</code> &lt;- {y}" for i, y in aliases.items()])
+        string += "\n".join(
+            [f"▫️ <code>{i}</code> &lt;- {y}" for i, y in aliases.items()]
+        )
 
         await utils.answer(message, string)
 

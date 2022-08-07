@@ -159,7 +159,11 @@ class CommandDispatcher:
                     and grep in utils.remove_html(line)
                     and (not ungrep or ungrep not in utils.remove_html(line))
                 ):
-                    res.append(utils.remove_html(line, escape=True).replace(grep, f"<u>{grep}</u>"))
+                    res.append(
+                        utils.remove_html(line, escape=True).replace(
+                            grep, f"<u>{grep}</u>"
+                        )
+                    )
 
                 if not grep and ungrep and ungrep not in utils.remove_html(line):
                     res.append(utils.remove_html(line, escape=True))

@@ -30,8 +30,8 @@ import logging
 import os
 import subprocess
 import sys
-from typing import Union
 import time
+from typing import Union
 
 import git
 from git import GitCommandError, Repo
@@ -41,7 +41,7 @@ from telethon.tl.functions.messages import (
 )
 from telethon.tl.types import DialogFilter, Message
 
-from .. import loader, utils, heroku, main
+from .. import heroku, loader, main, utils
 from ..inline.types import InlineCall
 
 logger = logging.getLogger(__name__)
